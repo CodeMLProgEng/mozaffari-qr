@@ -13,7 +13,14 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Estedad',Tahom
 input,select,textarea,button{font-family:inherit}
 .wrap{max-width:520px;margin:auto;padding:14px 12px 28px}
 header{text-align:center;padding:8px 0 4px}
-.logo{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center;font-size:26px;margin:0 auto 6px}
+.mini{position:relative;width:88px;height:88px;margin:0 auto 8px;background:#fff;padding:5px;border-radius:12px;box-shadow:0 0 14px rgba(56,189,248,.45);cursor:pointer}
+.mini #qr1 canvas,.mini #qr1 img{width:100%!important;height:auto!important;display:block}
+.mini .nm{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#0b1220;border:1.5px solid #fff;border-radius:5px;padding:1px 3px 2px;direction:ltr;font-weight:900;font-size:7px;line-height:1.05;text-align:center}
+.nm span{display:block}
+.a{color:#38bdf8;text-shadow:0 1px 0 #0284c7,0 2px 0 #0369a1,0 3px 0 #075985,0 4px 0 #0c4a6e,0 5px 5px rgba(0,0,0,.7),0 0 10px #00b4ff}
+.b{color:#ff2d55;text-shadow:0 1px 0 #e11d48,0 2px 0 #be123c,0 3px 0 #9f1239,0 4px 0 #881337,0 5px 5px rgba(0,0,0,.7),0 0 10px #ff0033}
+.mini .a,.mini .b{text-shadow:0 .5px 0 #075985,0 1px 1px rgba(0,0,0,.7)}
+.mini .b{text-shadow:0 .5px 0 #9f1239,0 1px 1px rgba(0,0,0,.7)}
 h1{font-size:19px;margin:0;font-weight:800}
 .sub{color:var(--mut);font-size:12.5px;line-height:1.6}
 .status{display:inline-block;margin-top:6px;padding:1px 12px;border-radius:99px;font-size:12px;font-weight:600}
@@ -25,30 +32,62 @@ h1{font-size:19px;margin:0;font-weight:800}
 .b1{background:#1e3a8a}.b2{background:#16a34a}.b3{background:linear-gradient(45deg,#f59e0b,#db2777,#7c3aed)}.b4{background:#0d9488}
 section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-bottom:10px}
 h2{font-size:15px;margin:0 0 8px;font-weight:800}
+h3{font-size:13px;margin:10px 0 6px;font-weight:800;color:var(--teal)}
 .row{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px dashed var(--line);font-size:13px}
 .row:last-child{border:0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .item{border:1px solid var(--line);border-radius:12px;padding:8px 4px;text-align:center;font-size:12px;line-height:1.5}
 .item span{display:block;font-size:22px;line-height:1.3}
 .item.wide{grid-column:1/-1;padding:6px}
+.item.shop{border-color:var(--teal);background:#14b8a614}
 .hs{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;-webkit-overflow-scrolling:touch}
 .hs>*{flex:0 0 78%;scroll-snap-align:start}
 .promo{background:linear-gradient(135deg,#0d948833,#2563eb33);border:1px solid var(--teal);border-radius:12px;padding:10px;font-size:13px}
 .promo b{color:var(--teal)}
-.rev{border:1px solid var(--line);border-radius:12px;padding:10px;font-size:13px}
+.rev{border:1px solid var(--line);border-radius:14px;padding:11px;font-size:13px;background:linear-gradient(160deg,#2563eb14,transparent)}
+.rh{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center;font-style:normal;font-weight:800;color:#fff}
+.rh small{display:block;color:var(--mut);font-size:11px;line-height:1.3}
+.smp{margin-right:auto;font-style:normal;font-size:10px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:0 7px}
+.rev p{margin:4px 0 0}
+.stars{color:#fbbf24;letter-spacing:1px}
+.rcta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.rcta a{display:block;text-align:center;padding:9px 4px;border-radius:12px;font-size:12.5px;font-weight:700;color:#fff;text-decoration:none;background:var(--teal)}
+.rcta a+a{background:#1e3a8a}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 input,select,textarea{width:100%;padding:10px;margin-bottom:8px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:14px}
 button{width:100%;padding:11px;border:0;border-radius:12px;background:var(--teal);color:#fff;font-weight:700;font-size:14px;cursor:pointer}
 .cardrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
 .card-no{direction:ltr;text-align:center;font-size:17px;letter-spacing:1.5px;font-weight:800}
 .cardrow button{width:auto;padding:9px 12px;font-size:13px}
-.ba div{height:95px;border-radius:12px;display:grid;place-items:center;font-size:12px;color:var(--mut);border:2px dashed var(--line);text-align:center}
-.stars{color:#fbbf24}
+.bph{height:95px;border-radius:12px;display:grid;place-items:center;font-size:12px;color:var(--mut);border:2px dashed var(--line);text-align:center;padding:6px}
+.bas{margin-bottom:10px}
+.baimg{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#000}
+.baimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lb{position:absolute;top:8px;padding:1px 9px;border-radius:99px;background:#000a;color:#fff;font-size:11px}
+.l1{left:8px}.l2{right:8px}
+.bas input[type=range]{padding:0;margin:6px 0 0}
+.bacap{text-align:center;font-size:12px;color:var(--mut)}
+.qrt{direction:ltr;text-align:center;font-weight:900;font-size:30px;line-height:1.1;letter-spacing:2px;margin-bottom:8px}
 .qrbox{position:relative;width:200px;margin:auto;background:#fff;padding:8px;border-radius:14px}
 #qr canvas,#qr img{width:100%!important;height:auto!important;display:block}
 .qrname{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#0b1220;padding:5px 8px 7px;border-radius:9px;border:2px solid #fff;direction:ltr;text-align:center;font-weight:900;font-size:16px;line-height:1.05}
-.qrname .a{display:block;color:#38bdf8;text-shadow:0 1px 0 #0284c7,0 2px 0 #0369a1,0 3px 0 #075985,0 4px 0 #0c4a6e,0 5px 5px rgba(0,0,0,.7),0 0 10px #00b4ff}
-.qrname .b{display:block;color:#ff2d55;text-shadow:0 1px 0 #e11d48,0 2px 0 #be123c,0 3px 0 #9f1239,0 4px 0 #881337,0 5px 5px rgba(0,0,0,.7),0 0 10px #ff0033}
+.qrname span{display:block}
+.qrname .a,.qrname .b{text-shadow:0 1px 0 #075985,0 2px 0 #0c4a6e,0 4px 4px rgba(0,0,0,.7),0 0 10px #00b4ff}
+.qrname .b{text-shadow:0 1px 0 #9f1239,0 2px 0 #881337,0 4px 4px rgba(0,0,0,.7),0 0 10px #ff0033}
+.ov{position:fixed;inset:0;background:#000a;display:none;align-items:flex-end;justify-content:center;z-index:50}
+.ov.on{display:flex}
+.sheet{width:100%;max-width:520px;background:var(--card);border-radius:20px 20px 0 0;padding:14px 14px 22px;border:1px solid var(--line)}
+.sheet a,.sheet button{display:block;width:100%;text-align:center;padding:12px;margin-top:8px;border-radius:12px;background:var(--bg);color:var(--text);border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14px}
+.sheet .x{background:transparent;color:var(--mut)}
+.qrk{direction:ltr;text-align:center;font-weight:900;font-size:30px;line-height:1.1;letter-spacing:3px;margin-bottom:6px;color:#000;text-shadow:0 1px 0 #1f2937,0 2px 0 #374151,0 3px 0 #4b5563,0 4px 0 #6b7280,0 6px 6px rgba(0,0,0,.45)}
+@media (prefers-color-scheme:dark){.qrk{text-shadow:0 1px 0 #374151,0 2px 0 #4b5563,0 3px 0 #6b7280,0 4px 0 #9ca3af,0 0 10px rgba(255,255,255,.55)}}
+.sheet input,.sheet select,.sheet textarea{margin-top:8px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pair figure{position:relative;margin:0}
+.pair img,.mid{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block}
+.pair .lb{left:50%;right:auto;transform:translateX(-50%)}
+.mid{aspect-ratio:auto;max-height:260px;margin-top:8px}
 footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
 </style>
 </head>
@@ -56,7 +95,7 @@ footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
 <div class="wrap">
 
 <header>
-  <div class="logo">📱</div>
+  <div class="qrk">QRCODE</div><div class="mini"><div id="qr1"></div><div class="nm"><span class="a">Mobile</span><span class="b">Mozafari</span></div></div>
   <h1>تعمیرات تخصصی موبایل مظفری</h1>
   <div class="sub">سیرجان، خیابان ولیعصر، بالاتر از چهارراه فراعی، نبش کوچه نجات‌الهی</div>
   <div id="status" class="status"></div>
@@ -64,9 +103,9 @@ footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
 
 <div class="btns">
   <a class="btn b1" href="tel:+989139470952"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>تماس</a>
-  <a class="btn b2" id="wa" href="#"><i>💬</i>واتساپ</a>
+  <a class="btn b2" id="wa" href="https://wa.me/989139470952"><i>💬</i>واتساپ</a>
   <a class="btn b3" href="https://instagram.com/Mobilemozafaripc" target="_blank" rel="noopener"><i>📸</i>اینستا</a>
-  <a class="btn b4" id="map" href="#" target="_blank" rel="noopener"><i>📍</i>مسیریابی</a>
+  <a class="btn b4" id="map" href="https://www.google.com/maps/search/?api=1&query=29.4502039,55.6626247" target="_blank" rel="noopener"><i>📍</i>مسیریابی</a>
 </div>
 
 <section>
@@ -84,27 +123,33 @@ footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
   </div>
 </section>
 
-<section style="text-align:center">
-  <h2>اسکن و ذخیره</h2>
-  <div class="qrbox"><div id="qr"></div><div class="qrname"><span class="a">Mobile</span><span class="b">Mozafari</span></div></div>
-  <div class="sub" style="margin-top:6px">با دوربین گوشی اسکن کنید</div>
-</section>
-
 <section>
-  <h2>🛠️ خدمات</h2>
+  <h2>🛠️ خدمات تعمیرات</h2>
   <div class="grid3">
     <div class="item"><span>🪟</span>گلس و ال‌سی‌دی</div>
-    <div class="item"><span>🔋</span>باتری</div>
+    <div class="item"><span>👆</span>تاچ و صفحه‌نمایش</div>
+    <div class="item"><span>🔋</span>تعویض باتری</div>
     <div class="item"><span>⚙️</span>نرم‌افزار و فلش</div>
+    <div class="item"><span>🔄</span>آپدیت، ریست و بوت‌لوپ</div>
     <div class="item"><span>🔌</span>شارژ و کانکتور</div>
     <div class="item"><span>💧</span>آب‌خوردگی</div>
     <div class="item"><span>🔬</span>تعمیر برد</div>
     <div class="item"><span>📷</span>دوربین</div>
     <div class="item"><span>🔊</span>اسپیکر و میکروفون</div>
-    <div class="item"><span>💾</span>ریکاوری اطلاعات</div>
-    <div class="item"><span>🛡️</span>گلس محافظ و قاب</div>
+    <div class="item"><span>📶</span>آنتن و سیم‌کارت</div>
+    <div class="item"><span>💾</span>ریکاوری و انتقال اطلاعات</div>
     <div class="item"><span>📲</span>فریم و درب پشت</div>
-    <div class="item"><span>🧰</span>سرویس کامل</div>
+    <div class="item"><span>🔘</span>دکمه‌های پاور و ولوم</div>
+    <div class="item"><span>🧰</span>عیب‌یابی و سرویس کامل</div>
+  </div>
+  <h3>🛍️ فروش لوازم جانبی</h3>
+  <div class="grid3">
+    <div class="item shop"><span>🛡️</span>گلس و محافظ لنز</div>
+    <div class="item shop"><span>📱</span>قاب و کاور</div>
+    <div class="item shop"><span>🔌</span>شارژر و کابل</div>
+    <div class="item shop"><span>🎧</span>هندزفری و هدفون</div>
+    <div class="item shop"><span>🔋</span>پاوربانک</div>
+    <div class="item shop"><span>💾</span>رم و فلش</div>
     <div class="item wide">✨ و غیره…</div>
   </div>
 </section>
@@ -114,20 +159,29 @@ footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
   <div class="hs">
     <div class="promo"><b>۱۰٪ تخفیف</b> مشتری جدید، اولین مراجعه</div>
     <div class="promo"><b>گلس محافظ رایگان</b> همراه تعویض ال‌سی‌دی</div>
+    <div class="promo"><b>تخفیف لوازم جانبی</b> همراه هر تعمیر</div>
     <div class="promo"><b>معرفی دوست:</b> تخفیف برای هر دو نفر</div>
   </div>
 </section>
 
 <section>
   <h2>📸 قبل و بعد تعمیر</h2>
-  <div class="two ba"><div>قبل 🔴<br>(عکس بذارید)</div><div>بعد 🟢<br>(عکس بذارید)</div></div>
+  <div id="ba"></div>
 </section>
 
 <section>
   <h2>⭐ نظرات مشتریان</h2>
-  <div class="hs">
-    <div class="rev"><span class="stars">★★★★★</span><br>«سریع و با قیمت منصفانه تعمیر کرد.» <small>— نمونه</small></div>
-    <div class="rev"><span class="stars">★★★★★</span><br>«گلس رو همون روز عوض کرد، عالی.» <small>— نمونه</small></div>
+  <div class="sub" style="margin-bottom:8px">تجربه‌ی مشتری‌ها از تعمیر و خرید 👇 (بکشید ←)</div>
+  <div class="hs" id="rvs">
+    <!-- نمونه‌ها: بعد از گرفتن نظر واقعی مشتری، متن و نام را جایگزین کنید و برچسب «نمونه» را حذف کنید -->
+    <div class="rev"><div class="rh"><i class="av">م</i><div><b>محمد ر.</b><small>تعویض ال‌سی‌دی</small></div><em class="smp">نمونه</em></div><div class="stars">★★★★★</div><p>برخورد محترمانه و کار تمیز. گوشی مثل روز اول شد.</p></div>
+    <div class="rev"><div class="rh"><i class="av">ز</i><div><b>زهرا ک.</b><small>تعویض باتری</small></div><em class="smp">نمونه</em></div><div class="stars">★★★★★</div><p>قبل از تعمیر همه چیز رو توضیح دادن و قیمت منصفانه بود.</p></div>
+    <div class="rev"><div class="rh"><i class="av">ع</i><div><b>علی ن.</b><small>نرم‌افزار و فلش</small></div><em class="smp">نمونه</em></div><div class="stars">★★★★★</div><p>مشکل نرم‌افزاری گوشیم رو سریع حل کردن. ممنون.</p></div>
+    <div class="rev"><div class="rh"><i class="av">س</i><div><b>سارا م.</b><small>خرید گلس و قاب</small></div><em class="smp">نمونه</em></div><div class="stars">★★★★★</div><p>تنوع لوازم جانبی خوب بود و گلس رو همون‌جا نصب کردن.</p></div>
+  </div>
+  <div class="rcta">
+    <a id="rw" href="#" onclick="return openRv()">✍️ نظرت رو بنویس</a>
+    <a href="https://maps.app.goo.gl/FPXtpV4FYrkksFDw8" target="_blank" rel="noopener">⭐ امتیاز در گوگل‌مپ</a>
   </div>
 </section>
 
@@ -138,7 +192,7 @@ footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
     <input id="m" placeholder="مدل گوشی">
   </div>
   <div class="two">
-    <select id="p"><option>شکستگی صفحه</option><option>باتری ضعیف</option><option>مشکل نرم‌افزار</option><option>شارژ نمی‌شود</option><option>آب‌خوردگی</option><option>سایر</option></select>
+    <select id="p"><option>شکستگی صفحه</option><option>باتری ضعیف</option><option>مشکل نرم‌افزار</option><option>شارژ نمی‌شود</option><option>آب‌خوردگی</option><option>خرید لوازم جانبی</option><option>سایر</option></select>
     <input id="d" placeholder="توضیح (اختیاری)">
   </div>
   <button onclick="sendReq()">ارسال در واتساپ 💬</button>
@@ -147,14 +201,50 @@ footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:14px}
 <footer>📍 سیرجان، خیابان ولیعصر، بالاتر از چهارراه فراعی، نبش کوچه نجات‌الهی</footer>
 </div>
 
+<div class="ov" id="ov" onclick="if(event.target===this)closeMap()">
+  <div class="sheet">
+    <h2 style="text-align:center">📍 مسیریابی تا مغازه</h2>
+    <a href="geo:29.4502039,55.6626247?q=29.4502039,55.6626247(تعمیرات موبایل مظفری)">📱 برنامه‌ی نقشه‌ی گوشی (نشان، بلد و ...)</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=29.4502039,55.6626247" target="_blank" rel="noopener">🗺️ گوگل‌مپ</a>
+    <a href="https://waze.com/ul?ll=29.4502039,55.6626247&navigate=yes" target="_blank" rel="noopener">🧭 Waze</a>
+    <a href="https://maps.apple.com/?ll=29.4502039,55.6626247&q=%D9%85%D8%B8%D9%81%D8%B1%DB%8C" target="_blank" rel="noopener">🍎 Apple Maps</a>
+    <button onclick="copyCoord(this)">📋 کپی مختصات</button>
+    <button class="x" onclick="closeMap()">بستن</button>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 var PHONE_INTL = "989139470952";
-var SITE_URL = location.href;
-document.getElementById("map").href="https://maps.app.goo.gl/FPXtpV4FYrkksFDw8";
-document.getElementById("wa").href="https://wa.me/"+PHONE_INTL;
+var SITE_URL = location.href.split("#")[0];
+// عکس‌های قبل و بعد: مسیر عکس‌ها را اینجا بنویسید. مثال:
+// {before:"img/b1.jpg", after:"img/a1.jpg", title:"تعویض ال‌سی‌دی"}
+var BA = [{before:"img/before.jpg",after:"img/after.jpg",mid:"img/mid.jpg",title:"تعویض ال‌سی‌دی و تاچ"}];
 
-try{ new QRCode(document.getElementById("qr"),{text:SITE_URL,width:400,height:400,correctLevel:QRCode.CorrectLevel.H}); }catch(e){}
+document.getElementById("rw").href="https://wa.me/"+PHONE_INTL+"?text="+encodeURIComponent("سلام، می‌خوام نظرم رو درباره‌ی تعمیرات موبایل مظفری بنویسم:");
+
+function mk(id,size){try{new QRCode(document.getElementById(id),{text:SITE_URL,width:size,height:size,correctLevel:QRCode.CorrectLevel.H});}catch(e){}}
+mk("qr1",300);
+
+(function(){ // مسیریابی: منوی انتخاب نقشه
+  var a=document.getElementById("map");
+  a.addEventListener("click",function(e){e.preventDefault();document.getElementById("ov").classList.add("on");});
+})();
+function closeMap(){document.getElementById("ov").classList.remove("on")}
+function copyCoord(b){
+  var t="29.4502039, 55.6626247";
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="✅ کپی شد"}).catch(function(){b.textContent=t});
+}
+
+window.renderBA=function(){
+  var box=document.getElementById("ba");
+  if(!BA.length){box.innerHTML='<div class="bph">نمونه‌کارهای تعمیر به‌زودی اینجا قرار می‌گیرد 📷</div>';return;}
+  box.innerHTML=BA.map(function(x){
+    return '<div class="bas"><div class="pair"><figure><img src="'+x.before+'" alt="قبل"><b class="lb">قبل</b></figure><figure><img src="'+x.after+'" alt="بعد"><b class="lb">بعد</b></figure></div>'+
+    (x.mid?'<img class="mid" src="'+x.mid+'" alt="حین تعمیر"><div class="bacap">حین کار</div>':'')+
+    '<div class="bacap"><b>'+(x.title||"")+'</b></div></div>';
+  }).join("");
+};renderBA();
 
 function sendReq(){
   var t="سلام، درخواست تعمیر:%0Aنام: "+enc("n")+"%0Aمدل: "+enc("m")+"%0Aمشکل: "+enc("p")+"%0Aتوضیح: "+enc("d");
@@ -173,6 +263,27 @@ function copyCard(b){
   s.className="status "+(open?"open":"closed");
   s.textContent=open?"🟢 الان باز هستیم":"🔴 الان بسته‌ایم";
 })();
+</script>
+<div class="ov" id="rvo" onclick="if(event.target===this)this.classList.remove('on')"><div class="sheet">
+<h2 style="text-align:center">✍️ نظر شما</h2>
+<input id="rn" maxlength="40" placeholder="نام شما"><select id="rs"><option value="5">★★★★★ عالی</option><option value="4">★★★★ خوب</option><option value="3">★★★ متوسط</option><option value="2">★★ ضعیف</option><option value="1">★ بد</option></select>
+<textarea id="rt" rows="3" maxlength="300" placeholder="نظرتان را بنویسید"></textarea>
+<button style="background:var(--teal);color:#fff" onclick="sendRv(this)">ارسال نظر</button>
+<div class="sub" style="text-align:center;margin-top:6px" id="rm">نظر شما بعد از تایید مغازه‌دار نمایش داده می‌شود.</div></div></div>
+<script>function openRv(){if(window.fbReady){document.getElementById("rvo").classList.add("on");return false}return true}</script>
+<script src="firebase-config.js"></script>
+<script type="module">
+if(window.FB&&FB.projectId)try{
+const B="https://www.gstatic.com/firebasejs/10.12.2/",{initializeApp}=await import(B+"firebase-app.js"),F=await import(B+"firebase-firestore.js");
+const db=F.getFirestore(initializeApp(FB)),$=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+window.fbReady=true;
+window.sendRv=async b=>{const n=$("rn").value.trim(),t=$("rt").value.trim();if(!n||!t){$("rm").textContent="نام و متن نظر را بنویسید.";return}b.disabled=true;
+try{await F.addDoc(F.collection(db,"reviews"),{name:n,text:t,stars:+$("rs").value,service:"",approved:false,createdAt:Date.now()});$("rn").value=$("rt").value="";$("rm").textContent="ممنون! نظر شما بعد از تایید نمایش داده می‌شود 🙏"}catch(e){$("rm").textContent="ارسال نشد، دوباره تلاش کنید."}b.disabled=false};
+const ba=(await F.getDocs(F.collection(db,"beforeafter"))).docs.map(d=>d.data()).filter(x=>String(x.before).startsWith("data:image/")&&String(x.after).startsWith("data:image/")).sort((a,b)=>b.createdAt-a.createdAt);
+if(ba.length){window.BA=ba.map(x=>({before:x.before,after:x.after,title:esc(x.title||"")}));renderBA()}
+const L=(await F.getDocs(F.query(F.collection(db,"reviews"),F.where("approved","==",true)))).docs.map(d=>d.data()).sort((a,b)=>b.createdAt-a.createdAt).slice(0,20);
+if(L.length)$("rvs").innerHTML=L.map(r=>'<div class="rev"><div class="rh"><i class="av">'+esc((r.name||"؟")[0])+'</i><div><b>'+esc(r.name)+'</b></div></div><div class="stars">'+"★".repeat(r.stars)+"☆".repeat(5-r.stars)+'</div><p>'+esc(r.text)+'</p></div>').join("")
+}catch(e){}
 </script>
 </body>
 </html>
